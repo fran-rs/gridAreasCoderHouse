@@ -1,0 +1,46 @@
+/*RESET*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  width: 80%;
+  margin: 0 auto;
+  color: black;
+  font-size: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 400px 150px;
+  /** Magia de las areas*/
+  grid-template-areas:
+    "header header nav"
+    "aside main main"
+    "footer footer footer";
+}
+
+.encabezado {
+  background-color: #f1ddbf;
+  grid-area: header;
+}
+
+.menu {
+  background-color: burlywood;
+  grid-area: nav;
+}
+
+.contenido {
+  background-color: #92ba92;
+  grid-area: main;
+}
+.aside {
+  background-color: #525e75;
+  grid-area: aside;
+}
+.pie {
+  background-color: #78938a;
+  grid-area: footer;
+}
