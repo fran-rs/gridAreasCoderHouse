@@ -13,13 +13,13 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 0.5fr 1fr 0.5fr;
   grid-template-rows: 200px 400px 150px;
   /** Magia de las areas*/
   grid-template-areas:
-    "header header nav"
-    "aside main main"
-    "footer footer .";
+    "nav header header"
+    "nav main aside"
+    "footer footer footer";
 }
 
 .encabezado {
@@ -43,4 +43,22 @@
 .pie {
   background-color: #78938a;
   grid-area: footer;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 950px) {
+  .grid-container {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 200px 100px 400px 150px;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main aside"
+      "footer footer";
+  }
+  .menu {
+    background-color: tomato;
+  }
 }
